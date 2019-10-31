@@ -1,3 +1,7 @@
+require("dotenv").config();
+
+console.log(process.env.MSG);
+
 const express = require("express");
 
 const server = express();
@@ -7,4 +11,4 @@ server.use(express.json());
 
 server.get("/", (req, res) => res.status(200).json({ message: "Good things" }));
 
-server.listen(port, () => console.log(`\nServer listening on port ${port}\n`));
+server.listen(port, () => console.log(`Server listening on port ${port}`));
